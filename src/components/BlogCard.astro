@@ -1,0 +1,29 @@
+---
+import { Picture } from '@astrojs/image/components';
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const allPosts = await Astro.glob('../pages/blog/*.md')
+const pageTitle = "Blog"
+
+export interface Props {
+	title: string;
+	url?: string;
+}
+const { title, url } = Astro.props;
+
+---
+<div>
+  <a href={url}>
+    <div class="card bg-neutral hover:bg-base-200 shadow-xl">
+      <figure>
+        <slot name="card-image" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{title}</h2>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary btn-sm">Read more</button>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

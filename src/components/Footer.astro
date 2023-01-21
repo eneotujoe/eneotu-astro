@@ -1,0 +1,10 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+import { SITE_TITLE } from '../../consts';
+---
+<footer class="footer footer-center p-10 bg-neutral text-primary font-thin rounded">
+  <SocialLinks />
+  <div>
+    <p>&copy; { new Date().getFullYear() } | { SITE_TITLE }</p>
+  </div>
+</footer>

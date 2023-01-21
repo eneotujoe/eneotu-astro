@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+let links = [
+	{url:'https://eneotu.netlify.app', title: 'Portfolio', text: 'Built with Nuxt, Strapi and deployed on Netlify'},
+    {url:'https://netflix-pro.netlify.app', title: 'Netflix Frontend Clone', text: 'Built With ReactJS and deployed on Netlify'},
+    {url:'https://instagram-pro.netlify.app', title: 'Instagram Frontend Clone', text: 'Built With ReactJS and deployed on Netlify'},
+    {url:'https://preptask.netlify.app/quiz', title: 'Preptask', text: 'An educational tool built with Nuxt, Django, GraphQL, Heroku and Netlify'},
+]
+
+const pageTitle = 'Projects'
+const description = 'My projects'
+---
+
+<BaseLayout title={pageTitle} description={description}>
+	<div class="container mx-auto my-5">
+		<div class="grid grid-cols-1 mx-3">
+			<div class="card bg-neutral shadow-xl text-center">
+				<div class="card-body items-center text-center">
+					<h2 class="font-black text-4xl">{ pageTitle }</h2>
+				</div>
+			</div>
+		</div>
+	
+		<div class="grid md:grid-cols-2 grid-cols-1 gap-4 my-4">
+			
+			{links.map(({url, title, text}) => (
+				<div class="card bg-neutral shadow-xl mx-3">
+					<a href={url} >
+						<div class="card-body">
+							<h1 class="text-xl font-semibold">{title}</h1>
+							<p>{text}</p>
+							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+								<path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+							</svg>
+						</div>
+					</a>
+				</div>
+			))}
+		</div>
+	</div>
+</BaseLayout>

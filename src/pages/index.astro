@@ -1,0 +1,14 @@
+---
+import Hero from '../components/Hero.astro';
+import Skills from '../components/Skills.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION } from '../../consts';
+
+---
+
+<BaseLayout title="Home" description={SITE_DESCRIPTION}>
+	<div>
+		<Hero />
+		<Skills />
+	</div>
+</BaseLayout>

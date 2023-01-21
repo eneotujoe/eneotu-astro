@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogCard from '../components/BlogCard.astro';
+import { Picture } from '@astrojs/image/components';
+
+const title = "Blog"
+const description = "Personal blog on artificial intelligence, machine learning and software engineering"
+const allPosts = await Astro.glob('../pages/blog/*.md')
+// console.log(allPosts)
+---
+<BaseLayout title={title} description={description}>
+  <div class="container mx-auto my-5">
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-4 mx-3">
+      {allPosts.map((post) =>
+        <BlogCard
+          title={post.frontmatter.title}
+          url={post.url}
+        >
+          <Picture
+            slot="card-image"
+            src={post.frontmatter.image.url}
+            alt={post.frontmatter.image.alt}
+            widths={[400, 800, 1200]} 
+            aspectRatio="16:9"
+          />
+        </BlogCard>
+      )}
+    </div>
+    
+    <div class="flex justify-center btn-group m-3">
+      <button class="btn">«</button>
+      <button class="btn btn-secondary">Page 1</button>
+      <button class="btn">»</button>
+    </div>
+  </div>
+</BaseLayout>

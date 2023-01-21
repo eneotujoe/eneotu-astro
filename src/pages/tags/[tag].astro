@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { Picture } from '@astrojs/image/components';
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../blog/*.md');
+  
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+<BaseLayout title="" description="">
+  <div class="container mx-auto my-5">
+    <h1 class="text-xl font-bold mb-5 ml-3">Posts tagged with {tag}</h1>
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-4 mx-3">
+      {posts.map((post) =>
+        <BlogCard
+          title={post.frontmatter.title}
+          url={post.url}
+        >
+          <Picture
+            slot="card-image"
+            src={post.frontmatter.image.url}
+            alt={post.frontmatter.image.alt}
+            widths={[400, 800, 1200]} 
+            aspectRatio="16:9"
+          />
+        </BlogCard>
+      )}
+    </div>
+  </div>
+</BaseLayout>

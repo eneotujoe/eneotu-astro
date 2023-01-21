@@ -1,0 +1,33 @@
+---
+const skills = [
+  { skill: 'Javascript' },
+  { skill: 'Python' },
+  { skill: 'C++' },
+  { skill: 'Django Rest Framework' },
+  { skill: 'GraphQL' },
+  { skill: 'VueJS' },
+  { skill: 'NuxtJS' },
+  { skill: 'ReactJS' },
+  { skill: 'NumPy' },
+  { skill: 'Pandas' },
+  { skill: 'Matplotlib' },
+  { skill: 'TensorFlow' },
+  { skill: 'PyTorch' },
+  { skill: 'Postgres' },
+  { skill: 'AWS' },
+  { skill: 'Docker' },
+  { skill: 'Adobe XD' },
+  { skill: 'Figma' },
+  { skill: 'Django' },
+  { skill: 'Solidworks' },
+]
+
+---
+<div class="my-10 md:mx-40 mx-3">
+  <div>
+    <h1 class="text-4xl font-black text-center text-primary py-5">Skills</h1>
+    {skills.map(({skill}) => (
+      <button class="btn btn-primary btn-outline normal-case text-xl m-1">{skill}</button>
+    ))}
+  </div>
+</div>

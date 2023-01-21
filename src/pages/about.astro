@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'About Me'
+const description = 'Eneotu Joe is an artificial intelligence researcher'
+---
+
+<BaseLayout title={title} description={description}>
+	<div class="container mx-auto my-5">
+		<div class="grid grid-cols-1">
+			<div class="card bg-neutral shadow-xl mx-3">
+				<div class="card-body items-center text-center">
+					<h1 class="font-black text-4xl">{ title }</h1>
+					<div>
+					<p>I’m an artificial intelligence researcher, I have over 4 years of experience in software engineering and a first-class degree in naval electromechanical engineering.</p>
+				  </div>
+			</div>
+			</div>
+		</div>
+		<div class="grid md:grid-cols-3 grid-cols-1 gap-4 my-4">
+			<div class="card bg-neutral shadow-xl mx-3">
+				<div class="card-body">
+					<h1 class="card-title">Education</h1>
+					<ul>
+						<li>
+							BSc in Marine Engineering (Naval Electromechanical Engineering),
+						</li>
+						<li>
+							Constanta Maritime Unversity, Romania
+						</li>
+					</ul>
+					<i class="ml-2">Final GPA: 10/10</i>
+				</div>
+			</div>
+			<div class="card bg-neutral shadow-xl mx-3">
+				<div class="card-body">
+					<h1 class="card-title">Awards</h1>
+					<p>
+						Best Student Award - Constanta Maritime Unversity, Romania
+					</p>
+				</div>
+			</div>
+			<div class="card bg-neutral shadow-xl mx-3">
+				<a href="https://www.ej-eng.org/index.php/ejeng/article/view/1739">
+					<div class="card-body">
+						<h1 class="card-title">Publication</h1>
+							<i>
+								Machine Learning Algorithmic Study of the Naira Exchange Rate
+							</i>
+							<button class="btn btn-primary"> View
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									<path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+								</svg>
+							</button>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
