@@ -10,16 +10,18 @@ const imageUrl = 'https://www.google.com/images/branding/googlelogo/2x/googlelog
     <div class="grid md:grid-cols-2 grid-cols-1">
       <div class="avatar flex justify-center">
         <div class="mask mask-squircle w-80">
-          <Picture src="/eneotu-joe.png" alt="profile photo" widths={[400, 800, 1200]}  aspectRatio="1:1" />
+          <Picture src="/eneotu-joe.png" alt="profile photo" widths={[400, 800, 1200]} aspectRatio="1:1" />
         </div>
       </div>
-      <div>
+      <div class="flex flex-col justify-center mt-3">
         <h1
-          class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-400"
-        >Eneotu Joe</h1>
+          class="md:text-6xl text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-violet-400"
+        >
+          Eneotu Joe
+        </h1>
         <p class="prose text-primary font-thin text-2xl my-3">I'm An Artificial Intelligence Researcher</p>
         <p class="prose font-thin text-2xl mb-3">And Software Engineer</p>
-        <button class="btn btn-primary btn-outline btn-lg font-thin">Contact Me</button>
+        <button class="btn btn-primary btn-outline font-thin">Contact Me</button>
       </div>
     </div>
   </div>
