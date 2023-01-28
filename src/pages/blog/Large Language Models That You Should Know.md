@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: '10 Large Language Models That You Should Know'
 pubDate: 28 January 2023
-description: ''
+description: '10 large machine learning language models with large number of parameters trained for Natural Language Processing'
 author: 'Eneotu Joe'
 image:
   url: 'https://res.cloudinary.com/reinforcedai/image/upload/v1674921621/eneotu.com/10_large_language_models_ppddb1.png'
@@ -10,7 +10,7 @@ image:
 tags: ['Large Language Models']
 ---
 
-Large Language Models (LLMs) are machine learning models with large numbers of parameters trained for Natural Language Processing. They require high computing power and petabytes scale of text data for training. This article presents some promising and popular LLMs.
+Large Language Models (LLMs) are machine learning models with large number of parameters trained for Natural Language Processing. They require high computing power and petabytes scale of text data for training. This article presents some promising and popular LLMs.
 
 1. **GPT-3 (Generative Pretrained Transformer)**
 
