@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: '10 Large Language Models That You Should Know'
+title: '10 Large Language Models You Should Know'
 pubDate: 28 January 2023
 description: '10 large machine learning language models with large number of parameters trained for Natural Language Processing'
 author: 'Eneotu Joe'
