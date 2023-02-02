@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
     <div class="grid md:grid-cols-2 grid-cols-1">
       <div class="mx-3">
         <h2>{frontmatter.title}</h2>
-        <time>{frontmatter.pubDate.slice(0, 15)}</time>
+        <time>{frontmatter.pubDate.slice(0, 20)}</time>
         <p>{frontmatter.minutesRead}</p>
       </div>
       <Picture src={frontmatter.image.url} alt={frontmatter.image.alt} widths={[400, 800, 1200]}  aspectRatio="16:9" />
